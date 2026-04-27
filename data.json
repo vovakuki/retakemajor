@@ -1,0 +1,73 @@
+{
+    "current": {
+        "teams": [
+            { "name": "8В Шакалы", "points": 0, "stage": "1/4 финала", "place": 1 },
+            { "name": "Сырдах", "points": 0, "stage": "1/4 финала", "place": 2 },
+            { "name": "Жулики Team", "points": 0, "stage": "1/4 финала", "place": 3 },
+            { "name": "Короли", "points": 0, "stage": "1/4 финала", "place": 4 },
+            { "name": "Lions Team", "points": 0, "stage": "1/4 финала", "place": 5 },
+            { "name": "Sweaty Daddies", "points": 0, "stage": "1/4 финала", "place": 6 },
+            { "name": "BZZ", "points": 0, "stage": "1/4 финала", "place": 7 },
+            { "name": "Mindgrid", "points": 0, "stage": "1/4 финала", "place": 8 }
+        ],
+        "bracket": {
+            "quarterfinals": [
+                { "team1": "Команда 1", "score1": 0, "team2": "Команда 8", "score2": 0, "winner": "" },
+                { "team1": "Команда 2", "score1": 0, "team2": "Команда 7", "score2": 0, "winner": "" },
+                { "team1": "Команда 3", "score1": 0, "team2": "Команда 6", "score2": 0, "winner": "" },
+                { "team1": "Команда 4", "score1": 0, "team2": "Команда 5", "score2": 0, "winner": "" }
+            ],
+            "semifinals": [
+                { "team1": "Победитель A", "score1": 0, "team2": "Победитель B", "score2": 0, "winner": "" },
+                { "team1": "Победитель C", "score1": 0, "team2": "Победитель D", "score2": 0, "winner": "" }
+            ],
+            "finals": [
+                { "team1": "Финалист 1", "score1": 0, "team2": "Финалист 2", "score2": 0, "winner": "" }
+            ]
+        },
+        "rosters": [
+            { "name": "8В Шакалы", "points": 0, "players": ["Роберт Дьячков", "Маркел Андреев", "Дима Иванов", "Ганс Тимофеев (Зам)"] },
+            { "name": "Сырдах", "points": 0, "players": ["Олег Тирютин", "Дамир Лукинов", "Макс Дмитриев"] },
+            { "name": "Жулики Team", "points": 0, "players": ["Антей Попов", "Юра Неустроев", "Тимур Айтымбетов"] },
+            { "name": "Короли", "points": 0, "players": ["Влад Сидоров", "Оскар Григорьев", "Коля Неустроев"] },
+            { "name": "Lions Team", "points": 0, "players": ["Алеша Алексеев", "Алан Шелехов", "Валентин Павлов"] },
+            { "name": "Mindgrid", "points": 0, "players": ["Дима Колосов", "Матвей Сысолятин", "Саша Токоемов"] },
+            { "name": "Sweaty Daddies", "points": 0, "players": ["Ваня Москаленко", "Макс Коновалов", "Марат Андреев"] },
+            { "name": "BZZ", "points": 0, "players": ["Макс Мыреев", "Коля Прибылых", "Юлиан Фёдоров"] }
+        ]
+    },
+    "history": {
+        "seasons": {
+            "2026-spring": {
+                "name": "Standoff 2",
+                "year": 2026,
+                "season": "Весна",
+                "dates": "14, 15, 17 апреля 2026",
+                "icon": "🔫",
+                "teams": [
+                    { "name": "Янчоус Team", "points": 100, "stage": "Чемпион", "place": 1 },
+                    { "name": "Маккун Team", "points": 85, "stage": "Финалист", "place": 2 },
+                    { "name": "Губинские", "points": 70, "stage": "Полуфинал", "place": 3 },
+                    { "name": "BZZ", "points": 65, "stage": "Полуфинал", "place": 4 },
+                    { "name": "Yztokyo", "points": 40, "stage": "1/4 финала", "place": 5 },
+                    { "name": "Беспощадные Смурфики", "points": 0, "stage": "1/4 финала", "place": 6 }
+                ],
+                "bracket": {
+                    "quarterfinals": [
+                        { "team1": "Янчоус Team", "score1": 1, "team2": "BZZ", "score2": 0, "winner": "Янчоус Team" },
+                        { "team1": "Маккуин Team", "score1": 1, "team2": "Беспощадные Смурфики", "score2": 0, "winner": "Маккуин Team" },
+                        { "team1": "Губинские", "score1": 1, "team2": "Yztokyo", "score2": 0, "winner": "Губинские" },
+                        { "team1": "BZZ", "score1": 1, "team2": "Yztokyo", "score2": 0, "winner": "BZZ" }
+                    ],
+                    "semifinals": [
+                        { "team1": "Янчоус Team", "score1": 1, "team2": "Губинские", "score2": 0, "winner": "Янчоус Team" },
+                        { "team1": "Маккуин Team", "score1": 1, "team2": "BZZ", "score2": 0, "winner": "Маккуин Team" }
+                    ],
+                    "finals": [
+                        { "team1": "Янчоус Team", "score1": 2, "team2": "Маккуин Team", "score2": 1, "winner": "Янчоус Team" }
+                    ]
+                }
+            }
+        }
+    }
+}
