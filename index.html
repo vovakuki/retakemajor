@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Retake Major | Школьный чемпионат</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <section class="hero" id="home">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="badge">⚡ Официальный турнир</div>
+            <h1>RETAKE <span class="highlight">MAJOR</span></h1>
+            <p>Школьный чемпионат по киберспорту | Сразись за звание лучшего</p>
+            <div class="hero-buttons">
+                <a href="#register" class="btn btn-primary"><i class="fas fa-gamepad"></i> Регистрация</a>
+                <a href="#schedule" class="btn btn-outline"><i class="fas fa-calendar-alt"></i> Расписание</a>
+            </div>
+            <div class="stats">
+                <div class="stat"><span>8+</span> Школ</div>
+                <div class="stat"><span>240+</span> Участников</div>
+                <div class="stat"><span>10 000₽</span> Призовой</div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i> Retake<span>Major</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О турнире</a></li>
+                <li><a href="#schedule">Расписание</a></li>
+                <li><a href="#teams">Команды</a></li>
+                <li><a href="#register" class="nav-register">Регистрация</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Что такое <span>Retake Major</span>?</h2>
+                <div class="divider"></div>
+                <p>Киберспортивный вызов для школьников. Только лучшие режимы, честная игра и атмосфера настоящего мейджора.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Престижный приз</h3>
+                    <p>Кубок чемпионов + денежные сертификаты и мерч от партнёров.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Командный дух</h3>
+                    <p>Состав 5x5, капитанская тактика и live-поддержка.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <h3>Школьная лига</h3>
+                    <p>Участвуют ученики 8–11 классов. Разрешены смешанные составы.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Fair Play</h3>
+                    <p>Античит-система, профессиональное судейство и стримы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2>Расписание <span>ивентов</span></h2>
+                <div class="divider"></div>
+                <p>Все этапы чемпионата Retake Major 2026</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">01-10 мая</div>
+                    <div class="timeline-content">
+                        <h3>Квалификации (Online)</h3>
+                        <p>Открытые отборочные. Топ-16 проходят в групповой этап.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">15-20 мая</div>
+                    <div class="timeline-content">
+                        <h3>Групповая стадия</h3>
+                        <p>4 группы по 4 команды. Матчи bo1, лучшие выходят в плей-офф.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">25-28 мая</div>
+                    <div class="timeline-content">
+                        <h3>Плей-офф (LAN финал)</h3>
+                        <p>Очная встреча в актовом зале школы №7. Прямые трансляции.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">30 мая</div>
+                    <div class="timeline-content">
+                        <h3>Гранд-финал</h3>
+                        <p>Церемония закрытия, награждение и сюрпризы.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="countdown-block">
+                <h3><i class="far fa-clock"></i> До старта квалификаций осталось:</h3>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div><span id="days">00</span><span>дней</span></div>
+                    <div><span id="hours">00</span><span>часов</span></div>
+                    <div><span id="minutes">00</span><span>минут</span></div>
+                    <div><span id="seconds">00</span><span>секунд</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teams" class="teams">
+        <div class="container">
+            <div class="section-header">
+                <h2>Топ <span>команд</span> сезона</h2>
+                <div class="divider"></div>
+                <p>Сильнейшие коллективы, которые уже подтвердили участие</p>
+            </div>
+            <div class="teams-grid" id="teamsGrid"></div>
+        </div>
+    </section>
+
+    <section id="register" class="register">
+        <div class="container">
+            <div class="register-wrapper">
+                <div class="register-info">
+                    <h2>Стань частью <span>Major</span></h2>
+                    <p>Оставь заявку, и наш координатор свяжется с капитаном для подтверждения участия. Количество мест ограничено!</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Бесплатное участие</li>
+                        <li><i class="fas fa-check-circle"></i> Призы и сертификаты</li>
+                        <li><i class="fas fa-check-circle"></i> Трансляции матчей</li>
+                    </ul>
+                </div>
+                <div class="register-form">
+                    <form id="registrationForm">
+                        <div class="input-group">
+                            <input type="text" id="teamName" placeholder="Название команды" required>
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="captainName" placeholder="Капитан (ФИО)" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" placeholder="Email для связи" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="phone" placeholder="Телефон капитана" required>
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">Отправить заявку <i class="fas fa-paper-plane"></i></button>
+                        <p class="form-note">После отправки вы получите подтверждение на почту в течение 24 часов.</p>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-crown"></i> Retake<span>Major</span>
+                    <p>Школьная киберспортивная лига</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#about">О турнире</a></li>
+                        <li><a href="#schedule">Расписание</a></li>
+                        <li><a href="#teams">Команды</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Соцсети</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Retake Major Championship. Все права защищены. Для школьников и их наставников.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
