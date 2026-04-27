@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Retake Major | История чемпионатов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i> Retake<span>Major</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#about">О чемпионате</a></li>
+                <li><a href="history.html" class="active">История</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero history-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="badge">📜 Архив чемпионатов</div>
+            <h1>ИСТОРИЯ <span class="highlight"></span></h1>
+            <p>Все прошедшие турниры Retake Major в Тулагинской СОШ имени П.И. Кочнева</p>
+        </div>
+    </section>
+
+    <div class="history-filter">
+        <div class="container">
+            <div class="filter-buttons" id="seasonFilter">
+                <button class="filter-btn active" data-season="2026-spring">🌿 Весна 2026 (Standoff 2)</button>
+                <button class="filter-btn" data-season="2026-summer" disabled style="opacity:0.5;">☀️ Лето 2026 (Brawl Stars) — скоро</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="seasonContent" class="season-content">
+        <div class="loading">Загрузка...</div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-crown"></i> Retake<span>Major</span>
+                    <p>Тулагинская СОШ имени П.И. Кочнева</p>
+                    <p>by @vovakuki</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="history.html">История</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Соцсети</h4>
+                    <div class="social-icons">
+                        <a href="https://max.ru/join/BgoBMP72FxYNQngpD9iFLdB9Gc3MYI295I5EM7iHdAk"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me/reteiktyrik"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Retake Major Championship. Архив прошедших турниров.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
