@@ -1,7 +1,7 @@
 {
     "current": {
         "teams": [
-            { "name": "8В Шакалы", "points": 0, "stage": "1/4 финала", "place": 1 },
+            { "name": "8В Шакалы", "points": 6, "stage": "1/4 финала", "place": 1 },
             { "name": "Сырдах", "points": 0, "stage": "1/4 финала", "place": 2 },
             { "name": "Жулики Team", "points": 0, "stage": "1/4 финала", "place": 3 },
             { "name": "Короли", "points": 0, "stage": "1/4 финала", "place": 4 },
@@ -12,10 +12,10 @@
         ],
         "bracket": {
             "quarterfinals": [
-                { "team1": "Команда 1", "score1": 0, "team2": "Команда 8", "score2": 0, "winner": "" },
-                { "team1": "Команда 2", "score1": 0, "team2": "Команда 7", "score2": 0, "winner": "" },
-                { "team1": "Команда 3", "score1": 0, "team2": "Команда 6", "score2": 0, "winner": "" },
-                { "team1": "Команда 4", "score1": 0, "team2": "Команда 5", "score2": 0, "winner": "" }
+                { "team1": "8В Шакалы", "score1": 6, "team2": "BZZ", "score2": 0, "winner": " 8В Шакалы" },
+                { "team1": "Сырдах", "score1": 0, "team2": "Mindgrid", "score2": 0, "winner": "" },
+                { "team1": "Lions TEAM", "score1": 0, "team2": "Жулики TEAM", "score2": 0, "winner": "" },
+                { "team1": "Sweaty Daddies", "score1": 0, "team2": "Короли", "score2": 0, "winner": "" }
             ],
             "semifinals": [
                 { "team1": "Победитель A", "score1": 0, "team2": "Победитель B", "score2": 0, "winner": "" },
@@ -26,14 +26,14 @@
             ]
         },
         "rosters": [
-            { "name": "8В Шакалы", "points": 0, "players": ["Роберт Дьячков", "Маркел Андреев", "Дима Иванов", "Ганс Тимофеев (Зам)"] },
+            { "name": "8В Шакалы", "points": 6, "players": ["Роберт Дьячков", "Маркел Андреев", "Дима Иванов", "Ганс Тимофеев (Зам)"] },
             { "name": "Сырдах", "points": 0, "players": ["Олег Тирютин", "Дамир Лукинов", "Макс Дмитриев"] },
             { "name": "Жулики Team", "points": 0, "players": ["Антей Попов", "Юра Неустроев", "Тимур Айтымбетов"] },
             { "name": "Короли", "points": 0, "players": ["Влад Сидоров", "Оскар Григорьев", "Коля Неустроев"] },
             { "name": "Lions Team", "points": 0, "players": ["Алеша Алексеев", "Алан Шелехов", "Валентин Павлов"] },
             { "name": "Mindgrid", "points": 0, "players": ["Дима Колосов", "Матвей Сысолятин", "Саша Токоемов"] },
             { "name": "Sweaty Daddies", "points": 0, "players": ["Ваня Москаленко", "Макс Коновалов", "Марат Андреев"] },
-            { "name": "BZZ", "points": 0, "players": ["Макс Мыреев", "Коля Прибылых", "Юлиан Фёдоров"] }
+            { "name": "BZZ", "points": 0, "players": ["Макс Мыреев", "Коля Прибылых", "Юлиан Фёдоров", "Катя Кормина (Зам)"] }
         ]
     },
     "history": {
