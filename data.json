@@ -1,40 +1,14 @@
 {
     "current": {
-        "teams": [
-            { "name": "8В Шакалы", "points": 19, "stage": "1/2 финала", "place": 4 },
-            { "name": "Сырдах", "points": 5, "stage": "1/4 финала", "place": 7 },
-            { "name": "Жулики Team", "points": 58, "stage": "Финал", "place": 1 },
-            { "name": "Короли", "points": 52, "stage": "Финал", "place": 2 },
-            { "name": "Lions Team", "points": 5, "stage": "1/4 финала", "place": 6 },
-            { "name": "Sweaty Daddies", "points": 8, "stage": "1/4 финала", "place": 5 },
-            { "name": "BZZ", "points": 3, "stage": "1/4 финала", "place": 8 },
-            { "name": "Mindgrid", "points": 21, "stage": "1/2 финала", "place": 3 }
-        ],
+        "seasonEnded": true,
+        "seasonName": "",
+        "teams": [],
         "bracket": {
-            "quarterfinals": [
-                { "team1": "8В Шакалы", "score1": 2, "team2": "BZZ", "score2": 0, "winner": " 8В Шакалы" },
-                { "team1": "Сырдах", "score1": 0, "team2": "Mindgrid", "score2": 2, "winner": "Mindgrid" },
-                { "team1": "Lions TEAM", "score1": 0, "team2": "Жулики TEAM", "score2": 2, "winner": "Жулики TEAM" },
-                { "team1": "Sweaty Daddies", "score1": 1, "team2": "Короли", "score2": 2, "winner": "Короли" }
-            ],
-            "semifinals": [
-                { "team1": "8В Шакалы", "score1": 0, "team2": "Жулики TEAM", "score2": 2, "winner": "Жулики TEAM" },
-                { "team1": "Короли", "score1": 2, "team2": "Mindgrid", "score2": 1, "winner": "Короли" }
-            ],
-            "finals": [
-                { "team1": "Короли", "score1": 23, "team2": "Жулики TEAM", "score2": 31, "winner": "Жулики TEAM" }
-            ]
+            "quarterfinals": [],
+            "semifinals": [],
+            "finals": []
         },
-        "rosters": [
-            { "name": "8В Шакалы", "points": 19, "players": ["Роберт Дьячков", "Маркел Андреев", "Дима Иванов", "Ганс Тимофеев (Зам)"] },
-            { "name": "Сырдах", "points": 5, "players": ["Олег Тирютин", "Дамир Лукинов", "Макс Дмитриев"] },
-            { "name": "Жулики Team", "points": 58, "players": ["Антей Попов", "Юра Неустроев", "Тимур Айтымбетов"] },
-            { "name": "Короли", "points": 52, "players": ["Влад Сидоров", "Оскар Григорьев", "Марат Андреев", "Саша Токоемов (Зам)", "Коля Неустроев (бывш.)"] },
-            { "name": "Lions Team", "points": 5, "players": ["Алеша Алексеев", "Алан Шелехов", "Валентин Павлов"] },
-            { "name": "Mindgrid", "points": 21, "players": ["Дима Колосов", "Матвей Сысолятин", "Саша Токоемов"] },
-            { "name": "Sweaty Daddies", "points": 8, "players": ["Ваня Москаленко", "Макс Коновалов", "Марат Андреев"] },
-            { "name": "BZZ", "points": 3, "players": ["Макс Мыреев", "Коля Прибылых", "Юлиан Фёдоров", "Катя Кормина (Зам)"] }
-        ]
+        "rosters": []
     },
     "history": {
         "seasons": {
@@ -55,18 +29,60 @@
                 "bracket": {
                     "quarterfinals": [
                         { "team1": "Янчоус Team", "score1": 1, "team2": "BZZ", "score2": 0, "winner": "Янчоус Team" },
-                        { "team1": "Маккуин Team", "score1": 1, "team2": "Беспощадные Смурфики", "score2": 0, "winner": "Маккуин Team" },
+                        { "team1": "Маккун Team", "score1": 1, "team2": "Беспощадные Смурфики", "score2": 0, "winner": "Маккун Team" },
                         { "team1": "Губинские", "score1": 1, "team2": "Yztokyo", "score2": 0, "winner": "Губинские" },
                         { "team1": "BZZ", "score1": 1, "team2": "Yztokyo", "score2": 0, "winner": "BZZ" }
                     ],
                     "semifinals": [
                         { "team1": "Янчоус Team", "score1": 1, "team2": "Губинские", "score2": 0, "winner": "Янчоус Team" },
-                        { "team1": "Маккуин Team", "score1": 1, "team2": "BZZ", "score2": 0, "winner": "Маккуин Team" }
+                        { "team1": "Маккун Team", "score1": 1, "team2": "BZZ", "score2": 0, "winner": "Маккун Team" }
                     ],
                     "finals": [
-                        { "team1": "Янчоус Team", "score1": 2, "team2": "Маккуин Team", "score2": 1, "winner": "Янчоус Team" }
+                        { "team1": "Янчоус Team", "score1": 2, "team2": "Маккун Team", "score2": 1, "winner": "Янчоус Team" }
                     ]
                 }
+            },
+            "2026-summer": {
+                "name": "Brawl Stars",
+                "year": 2026,
+                "season": "Лето",
+                "dates": "Май-Июнь 2026",
+                "icon": "⭐",
+                "teams": [
+                    { "name": "Жулики Team", "points": 58, "stage": "Чемпион", "place": 1 },
+                    { "name": "Короли", "points": 52, "stage": "Финалист", "place": 2 },
+                    { "name": "Mindgrid", "points": 21, "stage": "Полуфинал", "place": 3 },
+                    { "name": "8В Шакалы", "points": 19, "stage": "Полуфинал", "place": 4 },
+                    { "name": "Sweaty Daddies", "points": 8, "stage": "1/4 финала", "place": 5 },
+                    { "name": "Сырдах", "points": 5, "stage": "1/4 финала", "place": 6 },
+                    { "name": "Lions Team", "points": 5, "stage": "1/4 финала", "place": 7 },
+                    { "name": "BZZ", "points": 3, "stage": "1/4 финала", "place": 8 }
+                ],
+                "bracket": {
+                    "quarterfinals": [
+                        { "team1": "8В Шакалы", "score1": 2, "team2": "BZZ", "score2": 0, "winner": "8В Шакалы" },
+                        { "team1": "Сырдах", "score1": 0, "team2": "Mindgrid", "score2": 2, "winner": "Mindgrid" },
+                        { "team1": "Lions Team", "score1": 0, "team2": "Жулики Team", "score2": 2, "winner": "Жулики Team" },
+                        { "team1": "Sweaty Daddies", "score1": 1, "team2": "Короли", "score2": 2, "winner": "Короли" }
+                    ],
+                    "semifinals": [
+                        { "team1": "8В Шакалы", "score1": 0, "team2": "Жулики Team", "score2": 2, "winner": "Жулики Team" },
+                        { "team1": "Короли", "score1": 2, "team2": "Mindgrid", "score2": 1, "winner": "Короли" }
+                    ],
+                    "finals": [
+                        { "team1": "Короли", "score1": 23, "team2": "Жулики Team", "score2": 31, "winner": "Жулики Team" }
+                    ]
+                },
+                "rosters": [
+                    { "name": "8В Шакалы", "points": 19, "players": ["Роберт Дьячков", "Маркел Андреев", "Дима Иванов", "Ганс Тимофеев (Зам)"] },
+                    { "name": "Сырдах", "points": 5, "players": ["Олег Тирютин", "Дамир Лукинов", "Макс Дмитриев"] },
+                    { "name": "Жулики Team", "points": 58, "players": ["Антей Попов", "Юра Неустроев", "Тимур Айтымбетов"] },
+                    { "name": "Короли", "points": 52, "players": ["Влад Сидоров", "Оскар Григорьев", "Марат Андреев", "Саша Токоемов (Зам)", "Коля Неустроев (бывш.)"] },
+                    { "name": "Lions Team", "points": 5, "players": ["Алеша Алексеев", "Алан Шелехов", "Валентин Павлов"] },
+                    { "name": "Mindgrid", "points": 21, "players": ["Дима Колосов", "Матвей Сысолятин", "Саша Токоемов"] },
+                    { "name": "Sweaty Daddies", "points": 8, "players": ["Ваня Москаленко", "Макс Коновалов", "Марат Андреев"] },
+                    { "name": "BZZ", "points": 3, "players": ["Макс Мыреев", "Коля Прибылых", "Юлиан Фёдоров", "Катя Кормина (Зам)"] }
+                ]
             }
         }
     }
