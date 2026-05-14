@@ -45,8 +45,8 @@
             "2026-summer": {
                 "name": "Brawl Stars",
                 "year": 2026,
-                "season": "Лето",
-                "dates": "Май-Июнь 2026",
+                "season": "Весна",
+                "dates": "Апрель-Май 2026",
                 "icon": "⭐",
                 "teams": [
                     { "name": "Жулики Team", "points": 58, "stage": "Чемпион", "place": 1 },
