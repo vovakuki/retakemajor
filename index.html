@@ -33,14 +33,14 @@
     <section class="hero" id="home">
         <div class="overlay"></div>
         <div class="hero-content">
-            <div class="badge">🏆 Добро пожаловать</div>
+            <div class="badge" id="seasonBadge">🏆 Добро пожаловать</div>
             <h1>RETAKE <span class="highlight">MAJOR</span></h1>
-            <p>Школьный киберспортивный чемпионат<br>Тулагинской СОШ имени П.И. Кочнева</p>
-            <div class="hero-buttons">
+            <p>Школьный киберспортивный чемпионат<br>Тулагинская СОШ имени П.И. Кочнева</p>
+            <div class="hero-buttons" id="heroButtons">
                 <a href="#about" class="btn btn-primary"><i class="fas fa-info-circle"></i> О турнире</a>
                 <a href="#bracket" class="btn btn-outline"><i class="fas fa-trophy"></i> Турнирная сетка</a>
             </div>
-            <div class="stats">
+            <div class="stats" id="heroStats">
                 <div class="stat"><span>8</span> Команд</div>
                 <div class="stat"><span>40+</span> Участников</div>
                 <div class="stat"><span>🍰</span> Сладкие призы</div>
@@ -51,86 +51,106 @@
         </div>
     </section>
 
-    <!-- 2. О чемпионате (общая информация) -->
-    <section id="about" class="about">
+    <!-- Блок "Сезон завершён" (показывается только при seasonEnded = true) -->
+    <section id="seasonEndedMessage" class="season-ended" style="display: none;">
         <div class="container">
-            <div class="section-header">
-                <h2>О <span>чемпионате</span></h2>
-                <div class="divider"></div>
-                <p>Retake Major — главное киберспортивное событие в нашей школе</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <i class="fas fa-school"></i>
-                    <h3>Тулагинская СОШ</h3>
-                    <p>Чемпионат проходит в стенах нашей родной школы имени П.И. Кочнева. Участвуют ученики 5–11 классов.</p>
+            <div class="ended-card">
+                <i class="fas fa-flag-checkered"></i>
+                <h2>🏆 Сезон завершён! 🏆</h2>
+                <p>Текущий сезон чемпионата Retake Major подошёл к концу.</p>
+                <div class="autumn-wait">
+                    <i class="fas fa-leaf"></i>
+                    <p>Ждите объявления следующего сезона <strong>осенью 2026</strong>!</p>
+                    <p class="small">Следите за новостями в наших соцсетях и Telegram-канале</p>
                 </div>
-                <div class="about-card">
-                    <i class="fas fa-gamepad"></i>
-                    <h3>Игровые дисциплины</h3>
-                    <p>Каждый сезон новая дисциплина. Весна 2026 — Standoff 2, Brawl Stars.</p>
-                </div>
-                <div class="about-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Формат турнира</h3>
-                    <p>1/4 финала → Полуфинал → Финал. Матчи проходят в очном формате с поддержкой зрителей.</p>
-                </div>
-                <div class="about-card">
-                    <i class="fas fa-cake-candles"></i>
-                    <h3>Призы</h3>
-                    <p>Победители получают кубок чемпионов и сладкие угощения от партнёров турнира.</p>
-                </div>
+                <a href="history.html" class="btn btn-primary"><i class="fas fa-history"></i> Смотреть архив турниров</a>
             </div>
         </div>
     </section>
 
-    <!-- 3. Турнирная сетка и таблица -->
-    <section id="bracket" class="bracket-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Турнирная <span>сетка</span> и <span>таблица</span></h2>
-                <div class="divider"></div>
-                <p>Актуальное положение команд в текущем сезоне • Brawl Stars</p>
-            </div>
-            
-            <!-- Сетка -->
-            <div class="bracket-wrapper">
-                <h3 class="subsection-title"><i class="fas fa-share-alt"></i> Плей-офф сетка</h3>
-                <div class="bracket" id="bracketContainer">
-                    <div class="loading">Загрузка...</div>
+    <!-- Информация о текущем сезоне (скрывается при seasonEnded) -->
+    <div id="activeSeasonContent">
+        <!-- 2. О чемпионате (общая информация) -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>О <span>чемпионате</span></h2>
+                    <div class="divider"></div>
+                    <p>Retake Major — главное киберспортивное событие в нашей школе</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-school"></i>
+                        <h3>Тулагинская СОШ</h3>
+                        <p>Чемпионат проходит в стенах нашей родной школы имени П.И. Кочнева. Участвуют ученики 8–11 классов.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Игровые дисциплины</h3>
+                        <p>Каждый сезон новая дисциплина. Весна 2026 — Standoff 2, Лето 2026 — Brawl Stars.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Формат турнира</h3>
+                        <p>1/4 финала → Полуфинал → Финал. Матчи проходят в очном формате с поддержкой зрителей.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-cake-candles"></i>
+                        <h3>Призы</h3>
+                        <p>Победители получают кубок чемпионов и сладкие угощения от партнёров турнира.</p>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Таблица -->
-            <div class="table-wrapper">
-                <h3 class="subsection-title"><i class="fas fa-ranking-star"></i> Турнирная таблица</h3>
-                <div class="teams-table-wrapper">
-                    <table class="teams-table" id="teamsTable">
-                        <thead>
-                            <tr><th>Место</th><th>Команда</th><th>Очки</th><th>Этап</th></tr>
-                        </thead>
-                        <tbody id="teamsTableBody">
-                            <tr><td colspan="4">Загрузка...</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 4. Команды и их составы (8 команд) -->
-    <section id="teams" class="teams-roster">
-        <div class="container">
-            <div class="section-header">
-                <h2>Команды и <span>составы</span></h2>
-                <div class="divider"></div>
-                <p>8 команд-участниц текущего сезона • Brawl Stars</p>
+        <!-- 3. Турнирная сетка и таблица -->
+        <section id="bracket" class="bracket-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Турнирная <span>сетка</span> и <span>таблица</span></h2>
+                    <div class="divider"></div>
+                    <p id="seasonDescription">Актуальное положение команд в текущем сезоне • Brawl Stars</p>
+                </div>
+                
+                <!-- Сетка -->
+                <div class="bracket-wrapper">
+                    <h3 class="subsection-title"><i class="fas fa-share-alt"></i> Плей-офф сетка</h3>
+                    <div class="bracket" id="bracketContainer">
+                        <div class="loading">Загрузка...</div>
+                    </div>
+                </div>
+                
+                <!-- Таблица -->
+                <div class="table-wrapper">
+                    <h3 class="subsection-title"><i class="fas fa-ranking-star"></i> Турнирная таблица</h3>
+                    <div class="teams-table-wrapper">
+                        <table class="teams-table" id="teamsTable">
+                            <thead>
+                                <tr><th>Место</th><th>Команда</th><th>Очки</th><th>Этап</th></tr>
+                            </thead>
+                            <tbody id="teamsTableBody">
+                                <tr><td colspan="4">Загрузка...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="rosters-grid" id="rostersContainer">
-                <div class="loading">Загрузка составов...</div>
+        </section>
+
+        <!-- 4. Команды и их составы (8 команд) -->
+        <section id="teams" class="teams-roster">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Команды и <span>составы</span></h2>
+                    <div class="divider"></div>
+                    <p>8 команд-участниц текущего сезона</p>
+                </div>
+                <div class="rosters-grid" id="rostersContainer">
+                    <div class="loading">Загрузка составов...</div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- 5. Контакты -->
     <section id="contacts" class="contacts">
@@ -149,17 +169,17 @@
                 <div class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p><a href="mailto:retake.major@school.ru">retakemajor@mail.ru</a></p>
+                    <p><a href="mailto:retake.major@school.ru">retake.major@school.ru</a></p>
                 </div>
                 <div class="contact-card">
                     <i class="fab fa-telegram"></i>
                     <h3>Telegram</h3>
-                    <p><a href="https://t.me/reteiktyrik">RETAKE MAJOR</a></p>
+                    <p><a href="#">@retake_major</a></p>
                 </div>
                 <div class="contact-card">
                     <i class="fab fa-vk"></i>
-                    <h3>МАКС</h3>
-                    <p><a href="https://max.ru/join/BgoBMP72FxYNQngpD9iFLdB9Gc3MYI295I5EM7iHdAk">Retake Major</a></p>
+                    <h3>ВКонтакте</h3>
+                    <p><a href="#">vk.com/retake_major</a></p>
                 </div>
             </div>
         </div>
@@ -188,7 +208,6 @@
                 <div class="footer-logo">
                     <i class="fas fa-crown"></i> Retake<span>Major</span>
                     <p>Тулагинская СОШ имени П.И. Кочнева</p>
-                    <p>by @vovakuki</p>
                 </div>
                 <div class="footer-links">
                     <h4>Навигация</h4>
@@ -204,13 +223,13 @@
                 <div class="footer-social">
                     <h4>Соцсети</h4>
                     <div class="social-icons">
-                        <a href="https://max.ru/join/BgoBMP72FxYNQngpD9iFLdB9Gc3MYI295I5EM7iHdAk"><i class="fab fa-vk"></i></a>
-                        <a href="https://t.me/reteiktyrik"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Retake Major Championship. Школьный киберспортивный чемпионат.</p>
+                <p>© 2026 Retake Major Championship. Школьный киберспортивный чемпионат. Сладкие призы для победителей!</p>
             </div>
         </div>
     </footer>
