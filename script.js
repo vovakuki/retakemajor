@@ -17,6 +17,8 @@ const isHistoryPage = window.location.pathname.includes('history.html');
 // Данные
 let tournamentData = {
     current: {
+        seasonEnded: false,      // <-- новый флаг!
+        seasonName: "Лето 2026 • Brawl Stars",
         teams: [],
         bracket: { quarterfinals: [], semifinals: [], finals: [] },
         rosters: []
@@ -42,16 +44,91 @@ async function loadData() {
     if (isHistoryPage) {
         setupHistoryPage();
     } else {
+        checkSeasonStatus();      // проверяем, закончился ли сезон
+    }
+}
+
+// Проверка статуса сезона
+function checkSeasonStatus() {
+    const seasonEnded = tournamentData.current?.seasonEnded === true;
+    const hasNoTeams = !tournamentData.current?.teams || tournamentData.current.teams.length === 0;
+    const firstTeamIsPlaceholder = tournamentData.current?.teams?.[0]?.name === "Сезон завершён";
+    
+    const isSeasonEnded = seasonEnded || hasNoTeams || firstTeamIsPlaceholder;
+    
+    if (isSeasonEnded) {
+        showSeasonEndedMode();
+    } else {
+        showActiveSeasonMode();
         renderCurrentBracket();
         renderCurrentTeams();
         renderRosters();
     }
 }
 
-// Данные по умолчанию (8 команд с составами)
+// Режим "Сезон завершён"
+function showSeasonEndedMode() {
+    // Показываем блок с сообщением
+    const endedBlock = document.getElementById('seasonEndedMessage');
+    if (endedBlock) endedBlock.style.display = 'block';
+    
+    // Скрываем контент активного сезона
+    const activeContent = document.getElementById('activeSeasonContent');
+    if (activeContent) activeContent.style.display = 'none';
+    
+    // Обновляем hero-блок
+    const seasonBadge = document.getElementById('seasonBadge');
+    if (seasonBadge) {
+        seasonBadge.innerHTML = '🏁 Сезон завершён';
+        seasonBadge.style.background = '#ff980020';
+        seasonBadge.style.color = '#ff9800';
+    }
+    
+    const heroStats = document.getElementById('heroStats');
+    if (heroStats) {
+        heroStats.innerHTML = `
+            <div class="stat"><span>🏆</span> Чемпион определён</div>
+            <div class="stat"><span>📅</span> Ждите осень</div>
+            <div class="stat"><span>🍰</span> Призы вручены</div>
+        `;
+    }
+    
+    // Меняем текст кнопок
+    const heroButtons = document.getElementById('heroButtons');
+    if (heroButtons) {
+        heroButtons.innerHTML = `
+            <a href="history.html" class="btn btn-primary"><i class="fas fa-history"></i> Архив турниров</a>
+            <a href="#contacts" class="btn btn-outline"><i class="fas fa-envelope"></i> Контакты</a>
+        `;
+    }
+}
+
+// Режим "Активный сезон"
+function showActiveSeasonMode() {
+    const endedBlock = document.getElementById('seasonEndedMessage');
+    if (endedBlock) endedBlock.style.display = 'none';
+    
+    const activeContent = document.getElementById('activeSeasonContent');
+    if (activeContent) activeContent.style.display = 'block';
+    
+    // Обновляем информацию о сезоне
+    const seasonBadge = document.getElementById('seasonBadge');
+    if (seasonBadge && tournamentData.current?.seasonName) {
+        seasonBadge.innerHTML = `🎮 ${tournamentData.current.seasonName}`;
+    }
+    
+    const seasonDesc = document.getElementById('seasonDescription');
+    if (seasonDesc && tournamentData.current?.seasonName) {
+        seasonDesc.innerHTML = `Актуальное положение команд в текущем сезоне • ${tournamentData.current.seasonName}`;
+    }
+}
+
+// Данные по умолчанию (активный сезон)
 function useDefaultData() {
     tournamentData = {
         current: {
+            seasonEnded: false,
+            seasonName: "Лето 2026 • Brawl Stars",
             teams: [
                 { name: "Sugar Rush", points: 0, stage: "1/4 финала", place: 1 },
                 { name: "Brawl Stars", points: 0, stage: "1/4 финала", place: 2 },
@@ -78,8 +155,8 @@ function useDefaultData() {
                 ]
             },
             rosters: [
-                { name: "Sugar Rush", points: 0, players: ["Игрок 1", "Игрок 2", "Игрок 3", "Запасной"] },
-                { name: "Brawl Stars", points: 0, players: ["Игрок 1", "Игрок 2", "Игрок 3", "Запасной"] },
+                { name: "Sugar Rush", points: 0, players: ["Анна С.", "Денис М.", "Егор К.", "София Л. (запас)"] },
+                { name: "Brawl Stars", points: 0, players: ["Максим В.", "Артём П.", "Диана Р.", "Никита С. (запас)"] },
                 { name: "Команда 3", points: 0, players: ["Игрок 1", "Игрок 2", "Игрок 3", "Запасной"] },
                 { name: "Команда 4", points: 0, players: ["Игрок 1", "Игрок 2", "Игрок 3", "Запасной"] },
                 { name: "Команда 5", points: 0, players: ["Игрок 1", "Игрок 2", "Игрок 3", "Запасной"] },
@@ -123,7 +200,7 @@ function useDefaultData() {
     };
 }
 
-// Текущий турнир
+// Отрисовка сетки (без изменений)
 function renderCurrentBracket() {
     const container = document.getElementById('bracketContainer');
     if (!container) return;
@@ -154,7 +231,7 @@ function renderCurrentTeams() {
     if (!tbody) return;
     const teams = tournamentData.current?.teams;
     if (!teams || teams.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="4">Нет данных</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="4">Нет данных о командах</td></tr>';
         return;
     }
     const sorted = [...teams].sort((a,b) => b.points - a.points);
@@ -191,7 +268,7 @@ function renderRosters() {
     `).join('');
 }
 
-// Страница истории
+// История (без изменений)
 function setupHistoryPage() {
     const seasons = tournamentData.history?.seasons || {};
     const filterContainer = document.getElementById('seasonFilter');
