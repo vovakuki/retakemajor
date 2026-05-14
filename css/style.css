@@ -750,3 +750,67 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Добавьте эти стили в конец файла style.css */
+
+/* Season Ended Banner */
+.season-ended {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #fef5e8, #fff8f0);
+}
+
+.ended-card {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    border-radius: 48px;
+    padding: 48px 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border: 1px solid #ffe0b3;
+}
+
+.ended-card i {
+    font-size: 4rem;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+.ended-card h2 {
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+}
+
+.ended-card p {
+    color: #5a5a7a;
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+.autumn-wait {
+    background: #fff5e6;
+    border-radius: 32px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.autumn-wait i {
+    font-size: 2.5rem;
+    color: #ff8c42;
+    margin-bottom: 12px;
+}
+
+.autumn-wait p {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.autumn-wait .small {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.ended-card .btn {
+    margin-top: 16px;
+}
